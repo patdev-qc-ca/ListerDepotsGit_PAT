@@ -119,9 +119,8 @@ int main() {
     std::wcout << L"ListerDepotsGit_PAT\tv:1.01\t(C)Patrice Waechter-Ebling 2026\n" << std::endl;
     std::string pat;
     std::cout << "PAT GitHub : ";
-  //  std::getline(std::cin, pat);
-//    MiniClientGit client(pat);
-    MiniClientGit client("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");   
+    std::getline(std::cin, pat);
+    MiniClientGit client(pat);
     Depots depots;
     if (!client.ListerTousLesDepots(depots)) {
         std::cout << "Erreur lors de la recuperation.\n";
